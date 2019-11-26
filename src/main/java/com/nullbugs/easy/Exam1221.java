@@ -13,19 +13,20 @@ public class Exam1221 {
         System.out.println(balancedStringSplit("LLLLRRRR"));
     }
     public static int balancedStringSplit(String s) {
-        int count = 0;
-        int step = 1;
-        for (int i = 0; i < s.length()-1; ) {
-            if(s.charAt(i)!=s.charAt(i+1)){
-                i+=step;
-                step=1;
-                count++;
-                continue;
+        int rcount = 0;
+        int lcount = 0;
+        int all=0;
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)=='L'){
+                lcount++;
+            }else{
+                rcount++;
             }
-            step++;
-            i++;
+            if(lcount==rcount){
+                all++;
+            }
         }
-        return count;
+        return all;
     }
 
 
