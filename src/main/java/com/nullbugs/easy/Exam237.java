@@ -1,5 +1,7 @@
 package com.nullbugs.easy;
 
+import com.nullbugs.util.ListNode;
+
 /**
  * Exam 237
  */
@@ -19,8 +21,3 @@ public class Exam237 {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
