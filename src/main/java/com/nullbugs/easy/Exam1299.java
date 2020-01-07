@@ -7,6 +7,6 @@ public class Exam1299 {
     }
 
     public int[] replaceElements(int[] arr) {
-
+        return null;
     }
 }
