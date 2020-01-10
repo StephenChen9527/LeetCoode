@@ -10,23 +10,18 @@ import java.util.List;
 public class Exam876 {
 
     public static ListNode middleNode(ListNode head) {
-        ListNode first=head.next;
-        ListNode sec=head.next;
-        int count=0;
-        while(sec!=null){
-            sec=sec.next;
-            count++;
-            //奇数次
-            if((count&1)!=1){
-                first=first.next;
+        ListNode one=head;
+        ListNode two=head;
+        int len=1;
+        while (two!=null){
+            if(len%2==0){
+                one=one.next;
             }
+            two=two.next;
+            len++;
+        }
 
-        }
-        count--;
-        if((count&1)!=1){
-            first=first.next;
-        }
-        return first;
+        return one;
 
     }
 
@@ -40,7 +35,7 @@ public class Exam876 {
         ListNode head=new ListNode(arr[0]);
 
         ListNode current=head;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             current.next=new ListNode(arr[i]);
             current=current.next;
 
