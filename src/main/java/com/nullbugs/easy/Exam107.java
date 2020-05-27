@@ -9,27 +9,22 @@ import java.util.List;
 
 public class Exam107 {
 
-    private static List<List<Integer>> list=new LinkedList();
-
-    private static int level = 0;
-
-    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
-        if(root==null){
-            return null;
-        }
-        if(list.get(level)==null){
-            list.add(level,new ArrayList<>());
-        }
-        list.get(level).add(root.val);
-        level++;
-        levelOrderBottom(root.left);
-        levelOrderBottom(root.right);
-
-        level--;
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> list=new LinkedList();
+        travel(root,1,list);
         return list;
     }
 
-    public static void main(String[] args) {
-        levelOrderBottom(new TreeNode(1));
+    public void travel(TreeNode root,int level,List<List<Integer>> list) {
+        if(root==null){
+            return ;
+        }
+        if(level>list.size()){
+            list.add(0,new ArrayList<Integer>());
+        }
+        list.get(list.size()-level).add(root.val);
+        travel(root.left,level+1,list);
+        travel(root.right,level+1,list);
     }
+
 }
