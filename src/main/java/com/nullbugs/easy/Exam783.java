@@ -12,6 +12,6 @@ public class Exam783 {
         }
         minDiffInBST(root.left);
         minDiffInBST(root.right);
-
+        return 0;
     }
 }

@@ -11,19 +11,6 @@ public class Exam897 {
 
     }
     public TreeNode increasingBST(TreeNode root) {
-        if(root==null){
-            return null;
-        }
-
-
-        TreeNode right = increasingBST(root.right);
-        System.out.println(root.val);
-        TreeNode left = increasingBST(root.left);
-
-        ArrayDeque<TreeNode> stack = new ArrayDeque();
-        /*while (true){
-
-        }*/
 
 
         return null;
