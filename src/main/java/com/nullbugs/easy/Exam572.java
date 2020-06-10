@@ -9,6 +9,6 @@ public class Exam572 {
             return true;
         }
 
-
+        return false;
     }
 }
