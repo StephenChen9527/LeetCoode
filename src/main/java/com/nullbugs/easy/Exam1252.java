@@ -1,5 +1,10 @@
 package com.nullbugs.easy;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class Exam1252 {
 
     //0 0 0
@@ -9,19 +14,30 @@ public class Exam1252 {
     //1 1
 
     public int oddCells(int n, int m, int[][] indices) {
-        int[][] arr=new int[n][m];
-        int count=0;
+        Set<String> set = new HashSet<>();
 
-
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-
-
-
+        for (int i = 0; i < indices.length; i++) {
+            int x = indices[i][0];
+            int y = indices[i][1];
+            for (int j = 0; j < m; j++) {
+                String xy=x+"_"+j;
+                if(set.contains(xy)){
+                    set.remove(xy);
+                }else {
+                    set.add(xy);
+                }
+            }
+            for (int j = 0; j < n; j++) {
+                String xy=j+"_"+y;
+                if(set.contains(xy)){
+                    set.remove(xy);
+                }else {
+                    set.add(xy);
+                }
             }
         }
 
-        return count;
+
+        return set.size();
     }
 }
