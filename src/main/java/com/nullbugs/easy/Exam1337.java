@@ -27,7 +27,7 @@ public class Exam1337 {
     }
 
     public static int[] kWeakestRows(int[][] mat, int k) {
-        Map<Integer,String> map = new TreeMap<>();
+        /*Map<Integer,String> map = new TreeMap<>();
         for (int i = 0; i < mat.length; i++) {
             int fight = 0;
             for (int j = 0; j < mat[i].length; j++) {
@@ -43,7 +43,8 @@ public class Exam1337 {
         for (int i = 0; i < res.length; i++) {
             res[i]=Integer.valueOf(strings[i].split("_")[1]);
         }
-        return res;
+        return res;*/
+        return null;
     }
 
 }
