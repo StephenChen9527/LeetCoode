@@ -19,8 +19,8 @@ public class Exam543 {
         if(root == null){
             return 0;
         }
-        int left = diameterOfBinaryTree(root.left);
-        int right = diameterOfBinaryTree(root.right);
+        int left = deep(root.left);
+        int right = deep(root.right);
         return Integer.max(left,right)+1;
     }
 
