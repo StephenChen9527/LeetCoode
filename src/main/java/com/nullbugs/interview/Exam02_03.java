@@ -9,13 +9,6 @@ public class Exam02_03 {
         if(node==null){
             return;
         }
-        ListNode one  = node;
-        ListNode two  = node;
-        int j = 0;
-        while (true){
-            if(two==null){
-                break;
-            }
-        }
+
     }
 }

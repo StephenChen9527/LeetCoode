@@ -1,4 +1,4 @@
-package com.nullbugs.offer;
+package com.nullbugs.jianzhioffer;
 
 import java.util.Arrays;
 
